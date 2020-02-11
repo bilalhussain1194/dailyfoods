@@ -3,58 +3,116 @@
     ViewBag.Title = "Register";
     Layout = "~/Views/Shared/_Dailyfoodmasteer.cshtml";
 }
+<div class="woocommerce-account">
+    <div id="content" class="site-content" tabindex="-1">
+               <div class="col-full">
+                   <div class="pizzaro-breadcrumb">
+                       <nav class="woocommerce-breadcrumb"><a href="Dailyhome/DailyFoodIndex">Home</a><span class="delimiter"><i class="po po-arrow-right-slider"></i></span>Register</nav>
+                   </div>
+                   <!-- .woocommerce-breadcrumb -->
+                   <div id="primary" class="content-area">
+                       <main id="main" class="site-main">
+                           <div id="post-10" class="post-10 page type-page status-publish hentry">
+                               <div class="entry-content">
+                                   <div class="woocommerce">
+                                       <div class="customer-login-form">
 
-<h2>@ViewBag.Title.</h2>
+                                           <div class="u-column1 col-1">
+                                               <h2>Register</h2>
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
-    @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
-    <hr />
-    @Html.ValidationSummary("", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.phonenumber, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.phonenumber, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.dateofbirth, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.dateofbirth, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
-        </div>
-    </div>
-}
+                                               @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = " register", role = "form" }))
+            {
+                                                   @Html.AntiForgeryToken()
 
-@*@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}*@
+                                                   <p class="before-register-text">Create your very own account</p>
+                                                   @Html.ValidationSummary("", new { @class = "text-danger" })
+                                                   <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+                                                       <div class="form-group col-md-4 ">
+                                                           @Html.LabelFor(m => m.UserName,new {@class="form-inline" })<span class="required">*</span>
+
+
+                                                           @Html.TextBoxFor(m => m.UserName, new { @class = "form-control woocommerce-Input woocommerce-Input--text input-text" })
+                                                       </div>
+                                                   </p>
+                                                   <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+                                                       <div class="form-group col-md-4 ">
+                                                           @Html.LabelFor(m => m.Email, new { @class = "form-inline" }) <span class="required">*</span>
+                                                           @Html.TextBoxFor(m => m.Email, new { @class = "form-control woocommerce-Input woocommerce-Input--text input-text" })
+                                                       </div>
+                                                          
+                                                    </p>
+                                                   <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+                                                       <div class="form-group col-md-4 ">
+
+                                                           @Html.LabelFor(m => m.Password, new { @class = "form-inline" }) <span class="required">*</span>
+                                                           @Html.PasswordFor(m => m.Password, new { @class = "form-control woocommerce-Input woocommerce-Input--text input-text" })
+
+                                                       </div>
+                                                   </p>
+                                                   <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+                                                       <div class="form-group col-md-4 ">
+                                                           @Html.LabelFor(m => m.ConfirmPassword, new { @class = "form-inline" }) <span class="required">*</span>
+                                                           @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control woocommerce-Input woocommerce-Input--text input-text" })
+
+                                                       </div>
+                                                      
+                                                   </p>
+                                                   <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+                                                       <div class="form-group col-md-4 ">
+
+                                                           @Html.LabelFor(m => m.phonenumber, new { @class = "form-inline" }) <span class="required">*</span>
+                                                           @Html.TextBoxFor(m => m.phonenumber, new { @class = "form-control woocommerce-Input woocommerce-Input--text input-text" })
+
+                                                       </div>
+                                                   </p>
+                                                   <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+                                                       <div class="form-group col-md-4 ">
+                                                           @Html.LabelFor(m => m.dateofbirth, new { @class = "form-inline" }) <span class="required">*</span>
+                                                           @Html.TextBoxFor(m => m.dateofbirth, new { @type = "date", @class = "form-control woocommerce-Input woocommerce-Input--text input-text" })
+                                                       </div>
+                                                      
+                                                   </p>
+                                                <!-- Spam Trap -->
+                                                   @*<div style="left: -999em; position: absolute;">
+                                                       <label for="trap">Anti-spam</label>
+                                                       <input type="text" name="email_2" id="trap" tabindex="-1" />
+                                                   </div>*@
+                                                 
+                                                       <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
+                                                           <div class="form-group  col-md-3 ">
+                                                               <input type="submit" class="woocommerce-Button button" name="register" value="Register" />
+                                                           </div>
+                                                          
+                                                            
+                                                                 </p>
+                                                  
+                                               
+                                                   <div class="register-benefits">
+                                                       <h3>Sign up today and you will be able to :</h3>
+                                                       <ul>
+                                                           <li>Speed your way through checkout</li>
+                                                           <li>Track your orders easily</li>
+                                                           <li>Keep a record of all your purchases</li>
+                                                       </ul>
+                                                   </div>
+                                               }
+
+                                           </div>
+
+
+                                       </div>
+                                       </div>
+                                   </div>
+                               </div>
+</main>
+                   </div>
+
+                   </div>
+        </div>
+        </div>
+
+       
+
+        @*@section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }*@
