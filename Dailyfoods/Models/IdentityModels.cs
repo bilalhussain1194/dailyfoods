@@ -24,6 +24,8 @@ namespace Dailyfoods.Models
 
     public class ApplicationDbContext  : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Images> image { get; set; }
+        public DbSet<Product> product { get; set; }
         public DbSet<category> category { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

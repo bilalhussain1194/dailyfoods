@@ -219,11 +219,37 @@
     <Compile Include="Migrations\202002100802298_added1.Designer.cs">
       <DependentUpon>202002100802298_added1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002120443455_inertingcategories.cs" />
+    <Compile Include="Migrations\202002120443455_inertingcategories.Designer.cs">
+      <DependentUpon>202002120443455_inertingcategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002120502123_InsertingDatainCatgoriesTable.cs" />
+    <Compile Include="Migrations\202002120502123_InsertingDatainCatgoriesTable.Designer.cs">
+      <DependentUpon>202002120502123_InsertingDatainCatgoriesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002120509060_mullpropertyincategory.cs" />
+    <Compile Include="Migrations\202002120509060_mullpropertyincategory.Designer.cs">
+      <DependentUpon>202002120509060_mullpropertyincategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002120513339_adddatincategory.cs" />
+    <Compile Include="Migrations\202002120513339_adddatincategory.Designer.cs">
+      <DependentUpon>202002120513339_adddatincategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002120814045_AddedProductClass.cs" />
+    <Compile Include="Migrations\202002120814045_AddedProductClass.Designer.cs">
+      <DependentUpon>202002120814045_AddedProductClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002120823569_AddedImagesClass.cs" />
+    <Compile Include="Migrations\202002120823569_AddedImagesClass.Designer.cs">
+      <DependentUpon>202002120823569_AddedImagesClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Images.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -725,6 +751,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002100802298_added1.resx">
       <DependentUpon>202002100802298_added1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002120443455_inertingcategories.resx">
+      <DependentUpon>202002120443455_inertingcategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002120502123_InsertingDatainCatgoriesTable.resx">
+      <DependentUpon>202002120502123_InsertingDatainCatgoriesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002120509060_mullpropertyincategory.resx">
+      <DependentUpon>202002120509060_mullpropertyincategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002120513339_adddatincategory.resx">
+      <DependentUpon>202002120513339_adddatincategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002120814045_AddedProductClass.resx">
+      <DependentUpon>202002120814045_AddedProductClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002120823569_AddedImagesClass.resx">
+      <DependentUpon>202002120823569_AddedImagesClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
