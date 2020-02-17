@@ -9,14 +9,16 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Dailyfoods.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Dailyfoods.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
-        private ApplicationSignInManager _signInManager;
+        private ApplicationSignInManager _signInManager;   
         private ApplicationUserManager _userManager;
+       
 
         public AccountController()
         {
@@ -34,9 +36,9 @@ namespace Dailyfoods.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
