@@ -30,21 +30,21 @@ namespace Dailyfoods
 
 
      
-            if(!RoleManager.RoleExists("superadmin2"))
+            if(!RoleManager.RoleExists("superadmin"))
             {
                
                 var superuserdetails = new ApplicationUser();
-                superuserdetails.UserName = "DailyAdmin2";
-                superuserdetails.Email = "admin1234@dailyfoods.com.pk";
+                superuserdetails.UserName = "admin@dailyfoods.com.pk";
+                superuserdetails.Email = "admin@dailyfoods.com.pk";
                 superuserdetails.dateofbirth = Convert.ToDateTime("2/17/2018");
                 superuserdetails.LockoutEnabled = false;
-                var pwd = "Raconnector1194@";
+                var pwd = "Dailyfoods123@";
                 
                 var superuser = UserManager.Create(superuserdetails, pwd);
                 if (superuser.Succeeded)
 
                 {
-                    var role = new IdentityRole("superadmin2");
+                    var role = new IdentityRole("superadmin");
                     RoleManager.Create(role);
 
 

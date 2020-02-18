@@ -255,10 +255,11 @@ C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrat
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.csproj.GenerateResource.Cache
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.dll
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.pdb
-C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.csprojResolveAssemblyReference.cache
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.inertingcategories.resources
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.InsertingDatainCatgoriesTable.resources
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.mullpropertyincategory.resources
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.adddatincategory.resources
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.AddedProductClass.resources
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.AddedImagesClass.resources
+C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.addmigrationaddedpropinregistration.resources
+C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.csprojResolveAssemblyReference.cache

@@ -18,7 +18,8 @@ namespace Dailyfoods.Models
             return userIdentity;
         }
         public DateTime dateofbirth { get; set; }
-   
+        public string displayusername { get; set; }
+
 
     }
 

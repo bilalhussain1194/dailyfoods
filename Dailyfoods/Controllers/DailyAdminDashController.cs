@@ -10,8 +10,10 @@ namespace Dailyfoods.Controllers
     {
         [Authorize(Roles ="superadmin")]
         // GET: DailyAdminDash
+        [Route("admin")]
         public ActionResult Index()
         {
+
             return View();
         }
     }

@@ -77,7 +77,7 @@ namespace Dailyfoods.Controllers
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -153,7 +153,7 @@ namespace Dailyfoods.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email,PhoneNumber=model.phonenumber,dateofbirth=model.dateofbirth };
+                var user = new ApplicationUser { displayusername=model.UserName, UserName = model.Email, Email = model.Email,PhoneNumber=model.phonenumber,dateofbirth=model.dateofbirth };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

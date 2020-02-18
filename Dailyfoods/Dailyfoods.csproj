@@ -246,6 +246,10 @@
     <Compile Include="Migrations\202002120823569_AddedImagesClass.Designer.cs">
       <DependentUpon>202002120823569_AddedImagesClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002180618250_add-migration addedpropinregistration.cs" />
+    <Compile Include="Migrations\202002180618250_add-migration addedpropinregistration.Designer.cs">
+      <DependentUpon>202002180618250_add-migration addedpropinregistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\category.cs" />
@@ -776,9 +780,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -858,6 +859,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002120823569_AddedImagesClass.resx">
       <DependentUpon>202002120823569_AddedImagesClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002180618250_add-migration addedpropinregistration.resx">
+      <DependentUpon>202002180618250_add-migration addedpropinregistration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
