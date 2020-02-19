@@ -262,4 +262,4 @@ C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrat
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.AddedProductClass.resources
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.AddedImagesClass.resources
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.addmigrationaddedpropinregistration.resources
-C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.csprojResolveAssemblyReference.cache
+C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.addedpropinreg.resources

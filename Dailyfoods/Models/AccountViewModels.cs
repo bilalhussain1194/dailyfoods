@@ -83,6 +83,7 @@ namespace Dailyfoods.Models
         public string ConfirmPassword { get; set; }
         public string phonenumber { get; set; }
         public DateTime dateofbirth { get; set; }
+        public string address { get; set; }
     }
 
     public class ResetPasswordViewModel

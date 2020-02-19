@@ -250,6 +250,10 @@
     <Compile Include="Migrations\202002180618250_add-migration addedpropinregistration.Designer.cs">
       <DependentUpon>202002180618250_add-migration addedpropinregistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002190631294_addedpropinreg.cs" />
+    <Compile Include="Migrations\202002190631294_addedpropinreg.Designer.cs">
+      <DependentUpon>202002190631294_addedpropinreg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\category.cs" />
@@ -259,6 +263,7 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Viewmodel\AddProductViewmodel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\animate.min.css" />
@@ -823,6 +828,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Shared\_DailyfoodsAdminMaster.cshtml" />
     <Content Include="Views\DailyAdminDash\Index.cshtml" />
+    <Content Include="Views\Products\AddProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -862,6 +868,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002180618250_add-migration addedpropinregistration.resx">
       <DependentUpon>202002180618250_add-migration addedpropinregistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002190631294_addedpropinreg.resx">
+      <DependentUpon>202002190631294_addedpropinreg.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
