@@ -17,7 +17,8 @@ namespace Dailyfoods.Models
         public DateTime date_to { get; set; }
         public DateTime created_date { get; set; }
         public string sku { get; set; }
-        public category category { get; set; }
-        public int categoryid { get; set; }
+        public category Category { get; set; }
+        public int Categoryid { get; set; }
+        
     }
 }

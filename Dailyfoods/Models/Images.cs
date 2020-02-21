@@ -11,7 +11,8 @@ namespace Dailyfoods.Models
      
         public string img_path { get; set; }
         public Product product { get; set; }
-        public int productid { get; set; }
+
+        public virtual int ProductID { get; set; }
 
     }
 }

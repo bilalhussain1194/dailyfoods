@@ -254,6 +254,18 @@
     <Compile Include="Migrations\202002190631294_addedpropinreg.Designer.cs">
       <DependentUpon>202002190631294_addedpropinreg.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002211250069_ModifyPropInProducts.cs" />
+    <Compile Include="Migrations\202002211250069_ModifyPropInProducts.Designer.cs">
+      <DependentUpon>202002211250069_ModifyPropInProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002211329588_ModifyPropInImages.cs" />
+    <Compile Include="Migrations\202002211329588_ModifyPropInImages.Designer.cs">
+      <DependentUpon>202002211329588_ModifyPropInImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002211334212_ModifyPropInImage.cs" />
+    <Compile Include="Migrations\202002211334212_ModifyPropInImage.Designer.cs">
+      <DependentUpon>202002211334212_ModifyPropInImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\category.cs" />
@@ -871,6 +883,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002190631294_addedpropinreg.resx">
       <DependentUpon>202002190631294_addedpropinreg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002211250069_ModifyPropInProducts.resx">
+      <DependentUpon>202002211250069_ModifyPropInProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002211329588_ModifyPropInImages.resx">
+      <DependentUpon>202002211329588_ModifyPropInImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002211334212_ModifyPropInImage.resx">
+      <DependentUpon>202002211334212_ModifyPropInImage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -7,7 +7,7 @@ namespace Dailyfoods.Models
 {
     public class category
     {
-        public Byte id { get; set; }
+        public byte id { get; set; }
         public string name { get; set; }
 
     }
