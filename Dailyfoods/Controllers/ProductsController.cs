@@ -37,8 +37,17 @@ namespace Dailyfoods.Controllers
         }
       
         [Authorize(Roles ="superadmin")]
-      
-        public ActionResult AddProduct()
+         [HttpGet]
+        public ActionResult AddProductform()
+        {
+            var productviewmodel = new AddProductViewmodel
+            {
+                category_list = _context.category.ToList()
+            };
+            return View("AddProduct",productviewmodel);
+        }
+        [HttpPost]
+        public ActionResult AddProduct(AddProductViewmodel addproductviewmodel, List<HttpPostedFileBase> FileUpload)
         {
             var productviewmodel = new AddProductViewmodel
             {
@@ -46,5 +55,10 @@ namespace Dailyfoods.Controllers
             };
             return View(productviewmodel);
         }
+    }
+
+    public class imagefile
+    {
+        public IEnumerable<HttpPostedFileBase> files { get; set; }
     }
 }

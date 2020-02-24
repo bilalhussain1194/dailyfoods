@@ -7,9 +7,11 @@ namespace Dailyfoods.Models
 {
     public class Images
     {
-        public int id { get; set; }
+       
+        public Guid id { get; set; }
      
-        public string img_path { get; set; }
+        public string filename { get; set; }
+        public string extension { get; set; }
         public Product product { get; set; }
 
         public virtual int ProductID { get; set; }

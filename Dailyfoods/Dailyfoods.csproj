@@ -207,6 +207,7 @@
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\OthersController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\testingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -841,6 +842,7 @@
     <Content Include="Views\Shared\_DailyfoodsAdminMaster.cshtml" />
     <Content Include="Views\DailyAdminDash\Index.cshtml" />
     <Content Include="Views\Products\AddProduct.cshtml" />
+    <Content Include="Views\testing\create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
