@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Dailyfoods.Models;
 using Dailyfoods.Viewmodel;
+using System.IO;
 
 namespace Dailyfoods.Controllers
 {
@@ -19,7 +20,7 @@ namespace Dailyfoods.Controllers
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();
-        } 
+        }
         // GET: Products
         public ActionResult Index()
         {
@@ -35,30 +36,90 @@ namespace Dailyfoods.Controllers
         {
             return View();
         }
-      
-        [Authorize(Roles ="superadmin")]
-         [HttpGet]
+
+        [Authorize(Roles = "superadmin")]
+        [HttpGet]
         public ActionResult AddProductform()
         {
             var productviewmodel = new AddProductViewmodel
             {
                 category_list = _context.category.ToList()
             };
-            return View("AddProduct",productviewmodel);
+            return View("AddProduct", productviewmodel);
         }
-        [HttpPost]
-        public ActionResult AddProduct(AddProductViewmodel addproductviewmodel, List<HttpPostedFileBase> FileUpload)
-        {
-            var productviewmodel = new AddProductViewmodel
-            {
-                category_list = _context.category.ToList()
-            };
-            return View(productviewmodel);
-        }
-    }
 
-    public class imagefile
-    {
-        public IEnumerable<HttpPostedFileBase> files { get; set; }
+        //public ActionResult AddProduct(AddProductViewmodel addproductviewmodel, List<HttpPostedFileBase> FileUpload)
+        //{
+
+        //    var productviewmodel = new AddProductViewmodel
+        //    {
+        //        category_list = _context.category.ToList()
+        //    };
+        //    return View(productviewmodel);
+        //}
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddProduct(AddProductViewmodel ProductFormData)
+        {
+            if (ModelState.IsValid)
+            {
+                var productdetail = new Product()
+                {
+                    name = ProductFormData.products.name,
+                    sku = ProductFormData.products.sku,
+                    description = ProductFormData.products.description,
+                    price = ProductFormData.products.price,
+                    special_price = ProductFormData.products.special_price,
+                    date_from = ProductFormData.products.date_from,
+                    date_to = ProductFormData.products.date_to,
+                    created_date = ProductFormData.products.created_date,
+                    Categoryid = ProductFormData.products.Categoryid
+
+                };
+                List<Images> imageDetails = new List<Images>();
+                for (int i = 0; i < Request.Files.Count; i++)
+                {
+                    var file = Request.Files[i];
+
+                    if (file != null && file.ContentLength > 0)
+                    {
+                        var fileName = Path.GetFileName(file.FileName);
+                        Images imageDetail = new Images()
+                        {
+                            filename = fileName,
+                            extension = Path.GetExtension(fileName),
+                            id = Guid.NewGuid()
+                        };
+                        imageDetails.Add(imageDetail);
+
+                        var path = Path.Combine(Server.MapPath("~/ProductImages/"), imageDetail.id + imageDetail.extension);
+                        file.SaveAs(path);
+                    }
+                }
+
+                ProductFormData.products.images = imageDetails;
+
+                _context.product.Add(ProductFormData.products);
+
+
+                _context.SaveChanges();
+                ViewBag.successmessage = "Product successfully created";
+                return RedirectToAction("AddProductform", ViewBag.successmessage);
+            }
+            else
+            {
+
+                var productviewmodel = new AddProductViewmodel
+                {
+                    category_list = _context.category.ToList()
+                };
+                return View(productviewmodel);
+
+            }
+
+
+
+        }
     }
 }

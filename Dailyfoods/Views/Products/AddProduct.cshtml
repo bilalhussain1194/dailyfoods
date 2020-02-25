@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "AddProduct";
+
     Layout = "~/Views/Shared/_DailyfoodsAdminMaster.cshtml";
 }
 
@@ -116,11 +117,20 @@
             </div>
         </div>
     </div>
+  
 }
+
 
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+  @if(ViewBag.successmessage!=null)
+    {
+<script>alert(@ViewBag.successmessage);</script>
+    }
+    else
+    {
+    }
 @*<script>
     debugger
     var loadfile = function (event) {

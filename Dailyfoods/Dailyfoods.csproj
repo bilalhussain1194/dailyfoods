@@ -267,6 +267,18 @@
     <Compile Include="Migrations\202002211334212_ModifyPropInImage.Designer.cs">
       <DependentUpon>202002211334212_ModifyPropInImage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002250424098_ChangedPropInImages.cs" />
+    <Compile Include="Migrations\202002250424098_ChangedPropInImages.Designer.cs">
+      <DependentUpon>202002250424098_ChangedPropInImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002250501028_ChangedPropInImages1.cs" />
+    <Compile Include="Migrations\202002250501028_ChangedPropInImages1.Designer.cs">
+      <DependentUpon>202002250501028_ChangedPropInImages1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002250856010_propchanged.cs" />
+    <Compile Include="Migrations\202002250856010_propchanged.Designer.cs">
+      <DependentUpon>202002250856010_propchanged.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\category.cs" />
@@ -847,6 +859,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\images\slider\New folder\" />
+    <Folder Include="ProductImages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -894,6 +907,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002211334212_ModifyPropInImage.resx">
       <DependentUpon>202002211334212_ModifyPropInImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002250424098_ChangedPropInImages.resx">
+      <DependentUpon>202002250424098_ChangedPropInImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002250501028_ChangedPropInImages1.resx">
+      <DependentUpon>202002250501028_ChangedPropInImages1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002250856010_propchanged.resx">
+      <DependentUpon>202002250856010_propchanged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

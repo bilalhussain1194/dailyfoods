@@ -7,7 +7,7 @@
 <h2>create</h2>
 
 
-@using (Html.BeginForm("create", "testing", FormMethod.Post, htmlAttributes: new { @enctype = "multipart/form-data" }))
+@using (Html.BeginForm("create", "testing", FormMethod.Post, htmlAttributes: new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
@@ -107,8 +107,7 @@
             </div>
 
         </div>
-        <input type="submit" name="upload" value="submit" />
-
+      s
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
@@ -117,7 +116,8 @@
         </div>
     </div>
 }
+@*}
 @section Scripts {
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-}
+}*@

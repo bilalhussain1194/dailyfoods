@@ -26,23 +26,37 @@ namespace Dailyfoods.Controllers
         {
             return View();
         }
+        [HttpGet]
         public ActionResult create()
         {
-            return View();
+            var productviewmodel = new AddProductViewmodel()
+            {
+                category_list = _context.category.ToList()
+            };
+            return View(productviewmodel);
         }
-        public ActionResult Create()
-        {
-            return View();
-        }
-
+   
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(AddProductViewmodel productviewmodel)
+        public ActionResult Create(AddProductViewmodel ProductFormData)
         {
             if (ModelState.IsValid)
             {
+                var productdetail = new Product()
+                {
+                    name = ProductFormData.products.name,
+                    sku=ProductFormData.products.sku,
+                    description=ProductFormData.products.description,
+                    price=ProductFormData.products.price,
+                    special_price=ProductFormData.products.special_price,
+                    date_from=ProductFormData.products.date_from,
+                    date_to=ProductFormData.products.date_to,
+                    created_date=ProductFormData.products.created_date,
+                    Categoryid=ProductFormData.category.id
+
+                };
                 List<Images> imageDetails = new List<Images>();
                 for (int i = 0; i < Request.Files.Count; i++)
                 {
@@ -59,13 +73,16 @@ namespace Dailyfoods.Controllers
                         };
                         imageDetails.Add(imageDetail);
 
-                        var path = Path.Combine(Server.MapPath("~/App_Data/Upload/"), imageDetail.id + imageDetail.extension);
+                        var path = Path.Combine(Server.MapPath("~/ProductImages/"), imageDetail.id + imageDetail.extension);
                         file.SaveAs(path);
                     }
                 }
 
-                productviewmodel.images = imageDetails;
-                _context.product.Add(productviewmodel.products);
+                ProductFormData.products.images = imageDetails;
+              
+                _context.product.Add(ProductFormData.products);
+               
+               
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }

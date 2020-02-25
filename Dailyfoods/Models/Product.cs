@@ -19,6 +19,7 @@ namespace Dailyfoods.Models
         public string sku { get; set; }
         public category Category { get; set; }
         public int Categoryid { get; set; }
-        
+        public virtual ICollection<Images> images { get; set; }
+
     }
 }
