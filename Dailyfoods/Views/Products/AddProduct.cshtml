@@ -5,21 +5,21 @@
 
     Layout = "~/Views/Shared/_DailyfoodsAdminMaster.cshtml";
 }
-
-<h2>AddProduct</h2>
+<br/>
+<h2 class="title-text">Add Product</h2>
 
 @using (Html.BeginForm("AddProduct", "Products", FormMethod.Post, htmlAttributes: new { @enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Product</h4>
+       
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.products.name, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-6">
-                @Html.EditorFor(model => model.products.name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextBoxFor(model => model.products.name, htmlAttributes : new { @class = "form-control  woocommerce-Input woocommerce-Input--text input-text" })
                 @Html.ValidationMessageFor(model => model.products.name, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -34,10 +34,16 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.products.description, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-6">
-                @Html.EditorFor(model => model.products.description, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.products.description, "", new { @class = "text-danger" })
-            </div>
+            <div class="col-md-9">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        @Html.TextAreaFor(model => model.products.description, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+                   
+
+                    @Html.ValidationMessageFor(model => model.products.description, "", new { @class = "text-danger" })
+                </div>
         </div>
 
         <div class="form-group">
@@ -59,7 +65,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.products.date_from, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-6">
-                @Html.EditorFor(model => model.products.date_from, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                @Html.EditorFor(model => model.products.date_from, new { htmlAttributes = new { @class = "form-control", @type = "date",@readonly="true" } })
                 @Html.ValidationMessageFor(model => model.products.date_from, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -67,15 +73,16 @@
         <div class="form-group">
             @Html.LabelFor(model => model.products.date_to, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-6">
-                @Html.EditorFor(model => model.products.date_to, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                @Html.EditorFor(model => model.products.date_to, new { htmlAttributes = new { @class = "form-control", @type = "date", @readonly = "true" } })
                 @Html.ValidationMessageFor(model => model.products.date_to, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="display:none">
             @Html.LabelFor(model => model.products.created_date, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-6">
-                @Html.EditorFor(model => model.products.created_date, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                @*@Html.TextBoxFor(model => model.products.created_date, htmlAttributes: new { @class = "form-control", @type = "date", @Value = DateTime.Now } )*@
+                <input asp-for="products.created_date" value="@DateTime.Today" type="datetime" class="form-control" />
                 @Html.ValidationMessageFor(model => model.products.created_date, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -97,21 +104,24 @@
             </div>
         </div>
 
-        <div class="form-control">
+        <div>
 
-            <label>Upload Files</label>
-            <input type="file" class="form-control" multiple name="FileUpload" id="FileUpload" />
+            <label class="control-label col-md-2">Upload Files</label>
+            <div class="col-md-6" >
+               <input type="file"  multiple name="FileUpload" id="FileUpload" />
+            </div>
+           
         </div>
-        <div class="form-control">
+        @*<div class="form-control">
             <div id="DynamicsImages">
 
             </div>
 
-        </div>
-        <input type="submit" name="upload" value="submit" />
+        </div>*@
+        @*<input type="submit" name="upload" value="submit" />*@
         
 
-        <div class="form-group">
+        <div class="form-group right-side">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
@@ -124,13 +134,47 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-  @if(ViewBag.successmessage!=null)
-    {
-<script>alert(@ViewBag.successmessage);</script>
-    }
-    else
-    {
-    }
+@section scripts{
+    <script>
+        document.getElementById("products_special_price").addEventListener("keyup", function () {
+            var special_price = document.getElementById('products_special_price').value;
+            if (special_price != "") {
+                document.getElementById('products_date_from').removeAttribute("readonly");
+                document.getElementById('products_date_to').removeAttribute("readonly");
+            } else {
+                document.getElementById('products_date_from').setAttribute("readonly", true);
+                document.getElementById('products_date_to').setAttribute("readonly", true);
+            }
+        });
+    </script>
+<script>
+    (function ($) {
+        function HomeIndex() {
+            var $this = this;
+
+            function initialize() {
+                $('#products_description').summernote({
+                    focus: true,
+                    height: 150,
+                    codemirror: {
+                        theme: 'united'
+                    }
+                });
+            }
+
+            $this.init = function () {
+                initialize();
+            }
+        }
+        $(function () {
+            var self = new HomeIndex();
+            self.init();
+        })
+    }(jQuery))
+
+</script>
+}
+
 @*<script>
     debugger
     var loadfile = function (event) {

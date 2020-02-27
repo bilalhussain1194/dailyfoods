@@ -36,7 +36,7 @@ namespace Dailyfoods.Controllers
         {
             return View();
         }
-
+       
         [Authorize(Roles = "superadmin")]
         [HttpGet]
         public ActionResult AddProductform()
@@ -57,7 +57,7 @@ namespace Dailyfoods.Controllers
         //    };
         //    return View(productviewmodel);
         //}
-
+        [ValidateInput(false)]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult AddProduct(AddProductViewmodel ProductFormData)
@@ -74,7 +74,10 @@ namespace Dailyfoods.Controllers
                     date_from = ProductFormData.products.date_from,
                     date_to = ProductFormData.products.date_to,
                     created_date = ProductFormData.products.created_date,
-                    Categoryid = ProductFormData.products.Categoryid
+                    Categoryid = ProductFormData.category.id,
+                    qty=ProductFormData.products.qty
+
+                     
 
                 };
                 List<Images> imageDetails = new List<Images>();
@@ -90,6 +93,7 @@ namespace Dailyfoods.Controllers
                             filename = fileName,
                             extension = Path.GetExtension(fileName),
                             id = Guid.NewGuid()
+
                         };
                         imageDetails.Add(imageDetail);
 
@@ -97,8 +101,9 @@ namespace Dailyfoods.Controllers
                         file.SaveAs(path);
                     }
                 }
-
+                ProductFormData.products = productdetail;
                 ProductFormData.products.images = imageDetails;
+
 
                 _context.product.Add(ProductFormData.products);
 
@@ -116,10 +121,10 @@ namespace Dailyfoods.Controllers
                 };
                 return View(productviewmodel);
 
+
+
+
             }
-
-
-
         }
     }
 }
