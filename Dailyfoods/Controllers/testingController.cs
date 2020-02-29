@@ -54,7 +54,7 @@ namespace Dailyfoods.Controllers
                     date_from=ProductFormData.products.date_from,
                     date_to=ProductFormData.products.date_to,
                     created_date=ProductFormData.products.created_date,
-                    Categoryid=ProductFormData.category.id
+                    categoryID=ProductFormData.category.id
 
                 };
                 List<Images> imageDetails = new List<Images>();

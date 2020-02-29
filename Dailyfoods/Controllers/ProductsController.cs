@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Dailyfoods.Models;
 using Dailyfoods.Viewmodel;
 using System.IO;
+using System.Data.Entity;
 
 namespace Dailyfoods.Controllers
 {
@@ -32,15 +33,24 @@ namespace Dailyfoods.Controllers
 
             return View();
         }
+     
         public ActionResult product_description()
         {
             return View();
+        }
+        [Authorize(Roles = "superadmin")]
+        [HttpGet]
+        public ActionResult products_details()
+        {
+           var productlist = _context.product.ToList();
+            return View(productlist);
         }
        
         [Authorize(Roles = "superadmin")]
         [HttpGet]
         public ActionResult AddProductform()
         {
+        
             var productviewmodel = new AddProductViewmodel
             {
                 category_list = _context.category.ToList()
@@ -73,8 +83,8 @@ namespace Dailyfoods.Controllers
                     special_price = ProductFormData.products.special_price,
                     date_from = ProductFormData.products.date_from,
                     date_to = ProductFormData.products.date_to,
-                    created_date = ProductFormData.products.created_date,
-                    Categoryid = ProductFormData.category.id,
+                    created_date = DateTime.Now,
+                    categoryID = ProductFormData.category.id,
                     qty=ProductFormData.products.qty
 
                      
@@ -109,8 +119,8 @@ namespace Dailyfoods.Controllers
 
 
                 _context.SaveChanges();
-                ViewBag.successmessage = "Product successfully created";
-                return RedirectToAction("AddProductform", ViewBag.successmessage);
+                //ViewBag.successmessage = "Product successfully created";
+                return RedirectToAction("AddProductform");
             }
             else
             {

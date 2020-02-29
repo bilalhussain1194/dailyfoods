@@ -267,17 +267,17 @@
     <Compile Include="Migrations\202002211334212_ModifyPropInImage.Designer.cs">
       <DependentUpon>202002211334212_ModifyPropInImage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202002250424098_ChangedPropInImages.cs" />
-    <Compile Include="Migrations\202002250424098_ChangedPropInImages.Designer.cs">
-      <DependentUpon>202002250424098_ChangedPropInImages.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002250501028_ChangedPropInImages1.cs" />
-    <Compile Include="Migrations\202002250501028_ChangedPropInImages1.Designer.cs">
-      <DependentUpon>202002250501028_ChangedPropInImages1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202002250856010_propchanged.cs" />
     <Compile Include="Migrations\202002250856010_propchanged.Designer.cs">
       <DependentUpon>202002250856010_propchanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002281229557_propinproducts.cs" />
+    <Compile Include="Migrations\202002281229557_propinproducts.Designer.cs">
+      <DependentUpon>202002281229557_propinproducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002290542109_added2.cs" />
+    <Compile Include="Migrations\202002290542109_added2.Designer.cs">
+      <DependentUpon>202002290542109_added2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -912,6 +912,7 @@
     <Content Include="Views\DailyAdminDash\Index.cshtml" />
     <Content Include="Views\Products\AddProduct.cshtml" />
     <Content Include="Views\testing\create.cshtml" />
+    <Content Include="Views\Products\products_details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -965,14 +966,14 @@
     <EmbeddedResource Include="Migrations\202002211334212_ModifyPropInImage.resx">
       <DependentUpon>202002211334212_ModifyPropInImage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002250424098_ChangedPropInImages.resx">
-      <DependentUpon>202002250424098_ChangedPropInImages.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002250501028_ChangedPropInImages1.resx">
-      <DependentUpon>202002250501028_ChangedPropInImages1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002250856010_propchanged.resx">
       <DependentUpon>202002250856010_propchanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002281229557_propinproducts.resx">
+      <DependentUpon>202002281229557_propinproducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002290542109_added2.resx">
+      <DependentUpon>202002290542109_added2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

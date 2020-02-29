@@ -266,7 +266,7 @@ C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrat
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.ModifyPropInProducts.resources
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.ModifyPropInImages.resources
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.ModifyPropInImage.resources
-C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.ChangedPropInImages.resources
-C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.ChangedPropInImages1.resources
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.csprojResolveAssemblyReference.cache
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.propchanged.resources
+C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.propinproducts.resources
+C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.added2.resources

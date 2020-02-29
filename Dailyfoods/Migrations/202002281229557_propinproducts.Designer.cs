@@ -7,13 +7,13 @@ namespace Dailyfoods.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ChangedPropInImages : IMigrationMetadata
+    public sealed partial class propinproducts : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ChangedPropInImages));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(propinproducts));
         
         string IMigrationMetadata.Id
         {
-            get { return "202002250424098_ChangedPropInImages"; }
+            get { return "202002281229557_propinproducts"; }
         }
         
         string IMigrationMetadata.Source

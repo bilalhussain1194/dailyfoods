@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Dailyfoods.Models.Product>
+
+@{
+    ViewBag.Title = "products_details";
+    Layout = "~/Views/Shared/_DailyfoodsAdminMaster.cshtml";
+}
+
+<h2>products_details</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <thread>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Special price</th>
+            <th>Category</th>
+            <th>descrption</th>
+            <th><</th>
+        </tr>
+
+    </thread>
+
+@foreach (var item in Model) {
+    <tr>
+       <td>@item.name</td>
+        <td>@item.qty</td>
+        <td>@item.price</td>
+        <td>@item.special_price</td>
+        <td>@item.categoryID</td>
+      <td>@item.description</td>
+
+        <td>
+            
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
