@@ -279,6 +279,22 @@
     <Compile Include="Migrations\202002290542109_added2.Designer.cs">
       <DependentUpon>202002290542109_added2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002290558030_addedprop.cs" />
+    <Compile Include="Migrations\202002290558030_addedprop.Designer.cs">
+      <DependentUpon>202002290558030_addedprop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002290619223_addedpropincategoryyy.cs" />
+    <Compile Include="Migrations\202002290619223_addedpropincategoryyy.Designer.cs">
+      <DependentUpon>202002290619223_addedpropincategoryyy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002290823269_addedpropincategor.cs" />
+    <Compile Include="Migrations\202002290823269_addedpropincategor.Designer.cs">
+      <DependentUpon>202002290823269_addedpropincategor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002290842137_addedpropincategortt.cs" />
+    <Compile Include="Migrations\202002290842137_addedpropincategortt.Designer.cs">
+      <DependentUpon>202002290842137_addedpropincategortt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\category.cs" />
@@ -974,6 +990,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002290542109_added2.resx">
       <DependentUpon>202002290542109_added2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002290558030_addedprop.resx">
+      <DependentUpon>202002290558030_addedprop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002290619223_addedpropincategoryyy.resx">
+      <DependentUpon>202002290619223_addedpropincategoryyy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002290823269_addedpropincategor.resx">
+      <DependentUpon>202002290823269_addedpropincategor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002290842137_addedpropincategortt.resx">
+      <DependentUpon>202002290842137_addedpropincategortt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

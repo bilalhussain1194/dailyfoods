@@ -17,8 +17,9 @@ namespace Dailyfoods.Models
         public DateTime date_to { get; set; }
         public DateTime created_date { get; set; }
         public string sku { get; set; }
-        public ICollection<category> category { get; set; }
-        public int categoryID { get; set; }
+        public category category { get; set; }
+        public byte categoryid { get; set; }
+
         public virtual ICollection<Images> images { get; set; }
 
     }

@@ -42,7 +42,7 @@ namespace Dailyfoods.Controllers
         [HttpGet]
         public ActionResult products_details()
         {
-           var productlist = _context.product.ToList();
+           var productlist = _context.product.Include(c => c.category).ToList();
             return View(productlist);
         }
        
@@ -84,7 +84,7 @@ namespace Dailyfoods.Controllers
                     date_from = ProductFormData.products.date_from,
                     date_to = ProductFormData.products.date_to,
                     created_date = DateTime.Now,
-                    categoryID = ProductFormData.category.id,
+                    categoryid = ProductFormData.category.id,
                     qty=ProductFormData.products.qty
 
                      

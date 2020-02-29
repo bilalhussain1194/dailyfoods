@@ -270,3 +270,7 @@ C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.csproj
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.propchanged.resources
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.propinproducts.resources
 C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.added2.resources
+C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.addedprop.resources
+C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.addedpropincategoryyy.resources
+C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.addedpropincategor.resources
+C:\Users\Bilal Hussain\Desktop\DF_project\Dailyfoods\obj\Debug\Dailyfoods.Migrations.addedpropincategortt.resources
